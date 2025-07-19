@@ -261,14 +261,14 @@ function AuthorsPage() {
       <div className='h-screen font-mono p-4'>
          <header className='relative py-2 border-b'>
             <Button size='large' className='rounded-none absolute'>
-               <Link to={`/`}>⬅️ Dashboard</Link>
+               <Link to={`/`}>⬅️ DASHBOARD</Link>
             </Button>
             <h1 className='text-center font-bold text-5xl'>MANAGE AUTHORS</h1>
          </header>
          <main className='py-4 px-4 space-y-6'>
             <div className='flex justify-between'>
                <Button type='primary' size='large' className='rounded-none' onClick={handleAuthorAdd}>
-                  <span className='font-bold'>+</span>&nbsp; Add Author
+                  <span className='font-bold'>+</span>&nbsp; ADD AUTHOR
                </Button>
                {isSuccessAlertVisible && (
                   <Alert
