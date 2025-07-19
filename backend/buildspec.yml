@@ -17,7 +17,8 @@ phases:
     runtime-versions:
       nodejs: 20
     commands:
-      - echo Navigating to the backend directory...
+      - echo "Checking if backend directory exists..."
+      - if [ ! -d "backend" ]; then echo "No backend changes. Skipping build."; exit 0; fi
       - cd backend
 
   pre_build:
@@ -53,6 +54,6 @@ phases:
 
 artifacts:
   files:
-      - '**/*'
+    - '**/*'
   base-directory: backend
   discard-paths: no
