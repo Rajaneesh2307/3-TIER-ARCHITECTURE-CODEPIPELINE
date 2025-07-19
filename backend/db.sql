@@ -1,9 +1,8 @@
 -- Create Database and User
 CREATE DATABASE react_node_app; 
-CREATE USER 'appuser'@'%' IDENTIFIED BY 'learnIT02#'; 
+CREATE USER 'appuser'@'%' IDENTIFIED BY 'admin123'; 
 GRANT ALL PRIVILEGES ON react_node_app.* TO ' appuser'@'%'; 
 FLUSH PRIVILEGES; 
-
 
 -- Create Tables
 CREATE TABLE `author` ( 
@@ -30,8 +29,66 @@ CREATE TABLE `book` (
   CONSTRAINT `FK_66a4f0f47943a0d99c16ecf90b2` FOREIGN KEY (`authorId`) REFERENCES `author` (`id`) 
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci; 
 
+INSERT INTO `author` VALUES
+(1,'J.K. Rowling','1965-07-31','J.K. Rowling is a British author, best known for the Harry Potter series.','2025-07-15','2025-07-15'),
+(2,'J.R.R. Tolkien','1892-01-03','J.R.R. Tolkien was an English writer, poet, and academic, best known for The Lord of the Rings.','2025-07-15','2025-07-15'),
+(3,'Stephen King','1947-09-21','Stephen King is an American author of horror, supernatural fiction, suspense, and fantasy novels.','2025-07-15','2025-07-15'),
+(4,'Haruki Murakami','1949-01-12','Haruki Murakami is a Japanese writer known for his blend of fantasy and realism.','2025-07-15','2025-07-15'),
+(5,'Leo Tolstoy','1828-09-09','Leo Tolstoy was a Russian writer who is regarded as one of the greatest authors of all time.','2025-07-15','2025-07-15'),
+(6,'F. Scott Fitzgerald','1896-09-24','F. Scott Fitzgerald was an American novelist and short story writer, widely regarded as one of the greatest American writers of the 20th century.','2025-07-15','2025-07-15'),
+(7,'Jane Austen','1775-12-16','Jane Austen was an English novelist known primarily for her six major novels.','2025-07-15','2025-07-15'),
+(8,'George Orwell','1903-06-25','George Orwell was an English novelist, essayist, journalist and critic, known for his novels 1984 and Animal Farm.','2025-07-19','2025-07-19'),
+(9,'Agatha Christie','1890-09-15','Agatha Christie was an English writer known for her sixty-six detective novels and fourteen short story collections.','2025-07-19','2025-07-19'),
+(10,'Mark Twain','1835-11-30','Mark Twain was an American writer, humorist, entrepreneur, publisher, and lecturer best known for his novels The Adventures of Tom Sawyer and Adventures of Huckleberry Finn.','2025-07-19','2025-07-19'),
+(11,'Ernest Hemingway','1899-07-21','Ernest Hemingway was an American novelist and short-story writer, known for works like The Old Man and the Sea.','2025-07-19','2025-07-19'),
+(12,'Charles Dickens','1812-02-07','Charles Dickens was an English writer and social critic, famous for works such as Oliver Twist and A Christmas Carol.','2025-07-19','2025-07-19'),
+(13,'William Shakespeare','1564-04-26','William Shakespeare was an English playwright, poet, and actor, widely regarded as the greatest writer in the English language.','2025-07-19','2025-07-19'),
+(14,'Dan Brown','1964-06-22','Dan Brown is an American author best known for his thriller novels including The Da Vinci Code.','2025-07-19','2025-07-19'),
+(15,'Khaled Hosseini','1965-03-04','Khaled Hosseini is an Afghan-American novelist best known for The Kite Runner.','2025-07-19','2025-07-19'),
+(16,'Emily Brontë','1818-07-30','Emily Brontë was an English novelist and poet who wrote Wuthering Heights.','2025-07-19','2025-07-19'),
+(17,'Paulo Coelho','1947-08-24','Paulo Coelho is a Brazilian author best known for his novel The Alchemist.','2025-07-19','2025-07-19'),
+(18,'Arthur Conan Doyle','1859-05-22','Arthur Conan Doyle was a British writer and physician known for creating Sherlock Holmes.','2025-07-19','2025-07-19'),
+(19,'Suzanne Collins','1962-08-10','Suzanne Collins is an American author known for The Hunger Games trilogy.','2025-07-19','2025-07-19'),
+(20,'C.S. Lewis','1898-11-29','C.S. Lewis was a British writer and theologian, best known for The Chronicles of Narnia.','2025-07-19','2025-07-19'),
+(21,'Margaret Atwood','1939-11-18','Canadian author known for The Handmaid’s Tale and her speculative fiction.','2025-07-19','2025-07-19'),
+(22,'Gabriel García Márquez','1927-03-06','Colombian novelist and Nobel laureate, best known for One Hundred Years of Solitude.','2025-07-19','2025-07-19'),
+(23,'John Green','1977-08-24','American author of young adult fiction, including The Fault in Our Stars.','2025-07-19','2025-07-19'),
+(24,'Neil Gaiman','1960-11-10','British author of fantasy, horror, and science fiction works including Coraline and American Gods.','2025-07-19','2025-07-19'),
+(25,'Roald Dahl','1916-09-13','British author known for children’s books like Matilda and Charlie and the Chocolate Factory.','2025-07-19','2025-07-19'),
+(26,'Isaac Asimov','1920-01-02','Prolific science fiction and popular science author, known for the Foundation series.','2025-07-19','2025-07-19'),
+(27,'J.D. Salinger','1919-01-01','American author best known for The Catcher in the Rye.','2025-07-19','2025-07-19'),
+(28,'Virginia Woolf','1882-01-25','English writer and modernist icon, known for works like Mrs Dalloway.','2025-07-19','2025-07-19'),
+(29,'Toni Morrison','1931-02-18','American novelist and Nobel laureate, known for Beloved.','2025-07-19','2025-07-19'),
+(30,'Chinua Achebe','1930-11-16','Nigerian novelist known for Things Fall Apart, a seminal African novel.','2025-07-19','2025-07-19');
 
--- Restore Data
-INSERT INTO `author` VALUES (1,'J.K. Rowling (Joanne Kathleen Rowling)','1965-07-31','J.K. Rowling is a British author best known for writing the Harry Potter fantasy series. The series has won multiple awards and sold over 500 million copies, becoming the best-selling book series in history. Rowling has also written other novels, including The Casual Vacancy and the Cormoran Strike crime series under the pen name Robert Galbraith.','2024-05-29','2024-05-29'),(3,'Jane Austen','1775-12-16','Jane Austen was an English novelist known for her wit, social commentary, and romantic stories. Her six major novels, which explore themes of love, marriage, and money, have earned her a place as one of the greatest writers in the English language.','2024-05-29','2024-05-29'),(4,'Harper Lee','1960-07-11','Harper Lee was an American novelist best known for her Pulitzer Prize-winning novel To Kill a Mockingbird. The novel explores themes of racial injustice and the importance of compassion. Lee published a sequel, Go Set a Watchman, in 2015.','2024-05-29','2024-05-29'),(5,'J.R.R. Tolkien','1954-07-29','J.R.R. Tolkien was a British philologist and writer best known for his fantasy novels The Hobbit and The Lord of the Rings. Tolkien\'s works have had a profound influence on the fantasy genre and popular culture.','2024-05-29','2024-05-29'),(6,'Mary Shelley','1818-03-03','Mary Shelley was a British novelist, playwright, and short story writer, the daughter of Mary Wollstonecraft Godwin and the wife of poet Percy Bysshe Shelley. Frankenstein, or, The Modern Prometheus (1818) is her most famous work.','2024-05-29','2024-05-29'),(7,'Douglas Adams','1979-10-12','Douglas Adams was an English science fiction writer, satirist, humorist, dramatist, screenwriter, and occasional actor. He is best known for the Hitchhiker\'s Guide to the Galaxy comedy series, which inspired a radio comedy, several books, stage shows, comic books, a 1981 TV series, a 1984 video game, a 2005 feature film, and a 2008 sequel film.','2024-05-29','2024-05-29'); 
-
-INSERT INTO `book` VALUES (1,'Harry Potter and the Sorcerer\'s Stone','1997-07-26','On his birthday, Harry Potter discovers that he is the son of two well-known wizards, from whom he has inherited magical powers. He must attend a famous school of magic and sorcery, where he establishes a friendship with two young men who will become his companions on his adventure. During his first year at Hogwarts, he discovers that a malevolent and powerful wizard named Voldemort is in search of a philosopher\'s stone that prolongs the life of its owner.',223,'2024-05-29','2024-05-29',1),(3,'Harry Potter and the chamber of secrets','1998-07-02','Harry Potter and the sophomores investigate a malevolent threat to their Hogwarts classmates, a menacing beast that hides within the castle.',251,'2024-05-29','2024-05-29',1),(4,'Pride and Prejudice','1813-01-28','An English novel of manners by Jane Austen, first published in 1813. The story centres on the relationships among the Bennet sisters, in particular Elizabeth Bennet the middle daughter, and the wealthy Mr. Darcy. Austen satirizes the social classes of the English gentry through a witty and ironic narrative voice.',224,'2024-05-29','2024-05-29',3),(5,'Harry Potter and the Prisoner of Azkaban','1999-07-08','Harry\'s third year of studies at Hogwarts is threatened by Sirius Black\'s escape from Azkaban prison. Apparently, it is a dangerous wizard who was an accomplice of Lord Voldemort and who will try to take revenge on Harry Potter.',317,'2024-05-29','2024-05-29',1),(6,'Harry Potter and the Goblet of Fire','2000-07-08','Hogwarts prepares for the Triwizard Tournament, in which three schools of wizardry will compete. To everyone\'s surprise, Harry Potter is chosen to participate in the competition, in which he must fight dragons, enter the water and face his greatest fears.',636,'2024-05-29','2024-05-29',1),(7,'The Hitchhiker\'s Guide to the Galaxy','1979-10-12','A comic science fiction comedy series created by Douglas Adams. The story follows the comedic misadventures of Arthur Dent, a hapless Englishman, following the destruction of the Earth by the Vogons, a race of unpleasant bureaucratic aliens. Arthur escapes with his friend Ford Prefect, who reveals himself to be an undercover researcher for the titular Hitchhiker\'s Guide to the Galaxy, a galactic encyclopedia containing information about anything and everything.',184,'2024-05-29','2024-05-29',7),(8,'Frankenstein; or, The Modern Prometheus','1818-03-03','A Gothic novel by Mary Shelley that tells the story of Victor Frankenstein, a young scientist who creates a grotesque creature in an unorthodox scientific experiment. Frankenstein is horrified by his creation and abandons it, but the creature seeks revenge. The novel explores themes of scientific responsibility, creation versus destruction, and the nature of good and evil.',211,'2024-05-29','2024-05-29',6),(9,'The Lord of the Rings: The Fellowship of the Ring','1954-07-29','The first book in J.R.R. Tolkien\'s epic fantasy trilogy, The Lord of the Rings. The Fellowship of the Ring follows hobbit Frodo Baggins as he inherits the One Ring, an evil artifact of power created by the Dark Lord Sauron. Frodo embarks on a quest to destroy the Ring in the fires of Mount Doom, accompanied by a fellowship of eight companions.',482,'2024-05-29','2024-05-29',5); 
+INSERT INTO `book` VALUES
+(1,'Harry Potter and the Philosopher\'s Stone','1997-06-26','A young boy discovers he is a wizard on his 11th birthday and attends Hogwarts School.','223','2025-07-15','2025-07-15',1),
+(2,'The Hobbit','1937-09-21','Bilbo Baggins goes on an unexpected adventure with dwarves to reclaim treasure.','310','2025-07-15','2025-07-15',2),
+(3,'The Shining','1977-01-28','A family heads to an isolated hotel where an evil spiritual presence influences the father.','447','2025-07-15','2025-07-15',3),
+(4,'Kafka on the Shore','2002-09-12','A surreal novel involving two separate plots that eventually converge.','505','2025-07-15','2025-07-15',4),
+(5,'War and Peace','1869-01-01','A historical novel that chronicles the French invasion of Russia.','1225','2025-07-15','2025-07-15',5),
+(6,'The Great Gatsby','1925-04-10','A story of the young and mysterious millionaire Jay Gatsby and his obsession.','218','2025-07-15','2025-07-15',6),
+(7,'Pride and Prejudice','1813-01-28','Elizabeth Bennet deals with manners, upbringing, morality, and marriage.','279','2025-07-15','2025-07-15',7),
+(8,'1984','1949-06-08','A dystopian novel set in a totalitarian society ruled by Big Brother.','328','2025-07-19','2025-07-19',8),
+(9,'Murder on the Orient Express','1934-01-01','Poirot investigates a murder on a snowbound train.','256','2025-07-19','2025-07-19',9),
+(10,'The Adventures of Tom Sawyer','1876-06-01','A boy growing up along the Mississippi River.','274','2025-07-19','2025-07-19',10),
+(11,'The Old Man and the Sea','1952-09-01','An old fisherman battles a giant marlin far out in the Gulf Stream.','127','2025-07-19','2025-07-19',11),
+(12,'A Tale of Two Cities','1859-04-30','A novel set in London and Paris before and during the French Revolution.','489','2025-07-19','2025-07-19',12),
+(13,'Hamlet','1603-01-01','A tragedy about Prince Hamlet of Denmark.','160','2025-07-19','2025-07-19',13),
+(14,'The Da Vinci Code','2003-03-18','A symbologist uncovers a religious mystery protected by a secret society.','489','2025-07-19','2025-07-19',14),
+(15,'The Kite Runner','2003-05-29','A story of friendship and redemption in Afghanistan.','371','2025-07-19','2025-07-19',15),
+(16,'Wuthering Heights','1847-12-01','A tragic love story set on the Yorkshire moors.','416','2025-07-19','2025-07-19',16),
+(17,'The Alchemist','1988-04-15','A shepherd boy travels in search of a treasure.','208','2025-07-19','2025-07-19',17),
+(18,'The Hound of the Baskervilles','1902-04-01','Holmes investigates the legend of a supernatural hound.','256','2025-07-19','2025-07-19',18),
+(19,'The Hunger Games','2008-09-14','In a dystopian future, teenagers are forced to fight to the death.','384','2025-07-19','2025-07-19',19),
+(20,'The Lion, the Witch and the Wardrobe','1950-10-16','Children discover a magical world inside a wardrobe.','208','2025-07-19','2025-07-19',20),
+(21,'The Handmaid\'s Tale','1985-01-01','A dystopian tale of women forced into reproductive slavery.','311','2025-07-19','2025-07-19',21),
+(22,'One Hundred Years of Solitude','1967-05-30','The multi-generational story of the Buendía family.','417','2025-07-19','2025-07-19',22),
+(23,'The Fault in Our Stars','2012-01-10','Teenagers meet in a cancer support group and fall in love.','313','2025-07-19','2025-07-19',23),
+(24,'American Gods','2001-06-19','A man is caught in a war between old and new gods.','465','2025-07-19','2025-07-19',24),
+(25,'Charlie and the Chocolate Factory','1964-01-17','A boy wins a golden ticket to visit a magical chocolate factory.','192','2025-07-19','2025-07-19',25),
+(26,'Foundation','1951-05-01','A mathematician predicts the fall of the Galactic Empire.','255','2025-07-19','2025-07-19',26),
+(27,'The Catcher in the Rye','1951-07-16','A teenager recounts his days in New York after being expelled.','277','2025-07-19','2025-07-19',27),
+(28,'Mrs Dalloway','1925-05-14','A woman reflects on her life as she prepares for a party.','296','2025-07-19','2025-07-19',28),
+(29,'Beloved','1987-09-16','A woman is haunted by the ghost of her daughter.','324','2025-07-19','2025-07-19',29),
+(30,'Things Fall Apart','1958-06-17','A story about the clash between traditional Igbo society and British colonialism.','209','2025-07-19','2025-07-19',30);
