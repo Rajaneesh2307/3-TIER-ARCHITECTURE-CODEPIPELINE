@@ -185,10 +185,10 @@ function App() {
       <main className='py-4 px-4 space-y-6'>
         <div className='space-x-4'>
           <Button type='primary' size='large' className='rounded-none'>
-            <Link to={`books`}>Books</Link>
+            <Link to={`books`}>BOOKS</Link>
           </Button>
           <Button type='primary' size='large' className='rounded-none'>
-            <Link to={`authors`}>Authors</Link>
+            <Link to={`authors`}>AUTHORS</Link>
           </Button>
         </div>
         <div className='p-12 flex justify-between' style={{ height: "100%"}}>
